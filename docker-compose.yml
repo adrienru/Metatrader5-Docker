@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mt5_01:
+    image: ejtradermt-fix
+    container_name: mt5_robot_01
+    ports:
+      - "8001:80"     # Puerto Web (si el start.sh tiene novnc)
+      - "5901:5900"   # Puerto VNC Directo (Cliente VNC)
+      - "15555:15555" # Puerto ZMQ (Python)
+    restart: always
+    environment:
+      - VNC_PASSWORD=root
+      - USER=root
