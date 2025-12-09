@@ -35,13 +35,13 @@ password: root
 run and build image named as ejtradermt and run container named as ejtradermt
 
 ```bash
-make run
+docker build -t ejtradermt-fix .
 ```
 
 build image named ejtradermt
 
 ```bash
-make build
+docker-compose up -d
 ```
 
 login to shell
